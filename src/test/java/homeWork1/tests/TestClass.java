@@ -1,9 +1,9 @@
-package tests;
+package homeWork1.tests;
 
-import annotations.AfterSuite;
-import annotations.BeforeSuite;
-import annotations.CsvSource;
-import annotations.Test;
+import homeWork1.annotations.AfterSuite;
+import homeWork1.annotations.BeforeSuite;
+import homeWork1.annotations.CsvSource;
+import homeWork1.annotations.Test;
 
 public class TestClass {
 

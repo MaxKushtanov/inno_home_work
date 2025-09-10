@@ -1,4 +1,6 @@
-import tests.TestClass;
+package homeWork1;
+
+import homeWork1.tests.TestClass;
 
 public class Main {
 
