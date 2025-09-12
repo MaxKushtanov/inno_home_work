@@ -1,0 +1,35 @@
+spring:
+
+  profiles:
+    active: dev
+
+  main:
+    web-application-type: servlet   # явно указываем, что приложение работает как обычный servlet-based web
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/usersdb
+    username: myuser
+    password: mypassword
+
+  jpa:
+    hibernate:
+      ddl-auto: validate             # (СТАЛО) Hibernate теперь только проверяет схему, но не управляет ею
+    show-sql: true                   # печатаем SQL-запросы
+    properties:
+      hibernate.format_sql: true     # форматируем SQL для читаемости
+      hibernate.highlight_sql: true  # подсветка ключевых слов в SQL
+
+  output.ansi.enabled: always        # (ОСТАЛОСЬ) оставляем включённым, без изменений
+
+  flyway:
+    enabled: true                    # (НОВОЕ) включаем Flyway для миграций
+    locations: classpath:db/migration  # (НОВОЕ) папка, где будут лежать SQL-миграции
+    clean-disabled: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
+
+server:
+  port: 8080
