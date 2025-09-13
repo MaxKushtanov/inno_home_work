@@ -1,6 +1,6 @@
-package homeWork6.repo;
+package homeWork6.products.repo;
 
-import homeWork6.domain.User;
+import homeWork6.products.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package homeWork6;
+package homeWork7.payments;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,14 +7,17 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(
         scanBasePackages = {
-                "homeWork6", // продукты/репозитории сем. 11-12 (контроллеры и т.д.)
+                "homeWork6.products",
+                "homeWork7.payments",
         }
 )
 @EnableJpaRepositories(basePackages = {
-        "homeWork6.repo",   // репозитории продуктов
+        "homeWork6.products.repo",
+        "homeWork7.payments",
 })
 @EntityScan(basePackages = {
-        "homeWork6.domain", // сущности продуктов/заметок
+        "homeWork6.products.domain",
+        "homeWork7.payments.domain",
 })
 public class DemoApplication {
     public static void main(String[] args) {

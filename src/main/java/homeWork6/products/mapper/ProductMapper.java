@@ -1,8 +1,8 @@
-package homeWork6.api.mapper;
+package homeWork6.products.mapper;
 
 
-import homeWork6.api.dto.ProductDto;
-import homeWork6.domain.Product;
+import homeWork6.products.api.dto.ProductDto;
+import homeWork6.products.domain.Product;
 
 public final class ProductMapper {
     private ProductMapper() {

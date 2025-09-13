@@ -1,4 +1,4 @@
-package homeWork6.config;
+package homeWork6.products.config;
 
 import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 import org.springframework.context.annotation.Bean;

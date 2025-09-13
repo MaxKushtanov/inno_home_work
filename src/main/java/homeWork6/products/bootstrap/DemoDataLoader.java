@@ -1,8 +1,8 @@
-package homeWork6.bootstrap;
+package homeWork6.products.bootstrap;
 
-import homeWork6.domain.Product;
-import homeWork6.domain.User;
-import homeWork6.repo.UserRepository;
+import homeWork6.products.domain.Product;
+import homeWork6.products.domain.User;
+import homeWork6.products.repo.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

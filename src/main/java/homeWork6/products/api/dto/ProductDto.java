@@ -1,4 +1,4 @@
-package homeWork6.api.dto;
+package homeWork6.products.api.dto;
 
 import java.math.BigDecimal;
 
