@@ -1,4 +1,4 @@
-package homeWork6.api;
+package homeWork6.products.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;

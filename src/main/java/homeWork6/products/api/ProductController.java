@@ -1,8 +1,8 @@
-package homeWork6.api;
+package homeWork6.products.api;
 
-import homeWork6.api.dto.ProductDto;
-import homeWork6.api.mapper.ProductMapper;
-import homeWork6.repo.ProductRepository;
+import homeWork6.products.api.dto.ProductDto;
+import homeWork6.products.mapper.ProductMapper;
+import homeWork6.products.repo.ProductRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;

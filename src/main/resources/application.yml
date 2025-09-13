@@ -26,6 +26,37 @@ spring:
     locations: classpath:db/migration  # (НОВОЕ) папка, где будут лежать SQL-миграции
     clean-disabled: false
 
+payments:
+  products-base-url: "http://localhost:8080/api/products"   # куда ходим из payments
+  http:
+    connect-timeout-ms: 1500
+    read-timeout-ms: 2500
+
+products:
+  base-url: "http://localhost:8080/api/products"  # Встроенный Products API на том же порту
+  http:
+    connect-timeout-ms: 2000
+    read-timeout-ms: 3000
+
+resilience4j:
+  retry:
+    instances:
+      products:
+        max-attempts: 3
+        wait-duration: 200ms
+        retry-exceptions:
+          - org.springframework.web.client.ResourceAccessException
+          - org.springframework.web.client.HttpServerErrorException
+        ignore-exceptions:
+          - org.springframework.web.client.HttpClientErrorException
+  circuitbreaker:
+    instances:
+      products:
+        sliding-window-size: 10
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 3
+
 logging:
   level:
     org.hibernate.SQL: debug

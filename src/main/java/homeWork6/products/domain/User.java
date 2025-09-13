@@ -1,4 +1,4 @@
-package homeWork6.domain;
+package homeWork6.products.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
