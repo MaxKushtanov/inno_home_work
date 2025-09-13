@@ -4,7 +4,7 @@ import homeWork6.products.api.dto.ProductDto;
 import homeWork7.payments.api.dto.PaymentRequest;
 import homeWork7.payments.client.ProductsClient;
 import homeWork7.payments.domain.Payment;
-import homeWork7.payments.service.PaymentService;
+import homeWork8.limits.service.PaymentService;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.http.HttpStatus;
